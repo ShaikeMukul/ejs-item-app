@@ -1,0 +1,17 @@
+<%- include("layout/header") %>
+    <main>
+        <form action="/" method="post">
+            <input type="text" placeholder="item" name="item">
+            <button type="submit">Add</button>
+        </form>
+        <ul>
+            <% if(itemName.length > 0){ %>
+                <% for(let x=0; x < itemName.length; x++){ %>
+                    <li><%= itemName[x] %></li>
+                <% } %>
+            <% }else{ %>
+                <p>No data found</p>
+            <% } %>
+        </ul>
+    </main>
+<%- include("layout/footer") %>
